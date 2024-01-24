@@ -10,7 +10,9 @@ def main
     
       player_hand = gets.to_i
       if player_hand != 0 && player_hand != 1 && player_hand != 2
-        return puts "\n入力値が不正です。「0」「1」「2」の指定された数値を入力してください。\nゲームを続ける場合は「y」 ゲームを終了する場合は「n」を入力して下さい。"
+        puts "\n入力値が不正です。「0」「1」「2」の指定された数値を入力してください。"
+        puts separator  = "-------------------"
+        return choices
       end
 
       puts separator
@@ -47,7 +49,8 @@ def main
     
       player_direction = gets.to_i
       if player_direction != 0 && player_direction != 1 && player_direction != 2 && player_direction != 3
-        return puts "入力値が不正です。「0」「1」「2」「3」の指定された数値を入力してください。\nゲームを続ける場合は「y」 ゲームを終了する場合は「n」を入力して下さい。"
+        puts "\n入力値が不正です。「0」「1」「2」「3」の指定された数値を入力してください。"
+        return indicate_direction(result_1)
       end
 
       opponent_direction = rand(directions.size)
